@@ -22,7 +22,7 @@ export class NinjaAdapter extends BaseAdapterPlugin {
     SUBMIT_BUTTON: 'button.nj-chat-form--submit-button, button[data-e2e="main-submit-button"]',
     FILE_UPLOAD_BUTTON: 'button[data-tooltip-content="Attach files"], button[aria-label*="attach"]',
     FILE_INPUT: 'input[type="file"]',
-    MAIN_PANEL: '.nj-thread-view--chat',
+    MAIN_PANEL: '.nj-thread-view',
     DROP_ZONE: 'textarea.ThreadInputBox_textArea__caqN+',
     FILE_PREVIEW: '.file-preview, .attachment-preview',
     BUTTON_INSERTION_CONTAINER: '.SkillCommandSection_root__j71Rq',
