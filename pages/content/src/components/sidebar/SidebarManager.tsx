@@ -54,6 +54,7 @@ export class SidebarManager extends BaseSidebarManager {
   private static deepseekInstance: SidebarManager | null = null;
   private static kagiInstance: SidebarManager | null = null;
   private static t3chatInstance: SidebarManager | null = null;
+  private static ninjaInstance: SidebarManager | null = null;
   private lastToolOutputsHash: string = '';
   private lastMcpToolsHash: string = '';
   private isFirstLoad: boolean = true;
@@ -129,6 +130,11 @@ export class SidebarManager extends BaseSidebarManager {
           SidebarManager.t3chatInstance = new SidebarManager(siteType);
         }
         return SidebarManager.t3chatInstance;
+      case 'ninja':
+        if (!SidebarManager.ninjaInstance) {
+          SidebarManager.ninjaInstance = new SidebarManager(siteType);
+        }
+        return SidebarManager.ninjaInstance;
       default:
         // For any unexpected site type, create and return a new instance
         logMessage(`Creating new SidebarManager for unknown site type: ${siteType}`);
@@ -628,6 +634,11 @@ export class SidebarManager extends BaseSidebarManager {
       case 't3chat':
         if (SidebarManager.t3chatInstance === this) {
           SidebarManager.t3chatInstance = null;
+        }
+        break;
+      case 'ninja':
+        if (SidebarManager.ninjaInstance === this) {
+          SidebarManager.ninjaInstance = null;
         }
         break;
     }

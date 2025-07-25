@@ -169,6 +169,14 @@ export const WEBSITE_CONFIGS: Array<{
       function_result_selector: ['div[class*="user-content"]'],
     },
   },
+  {
+    urlPattern: 'ninjatech.ai',
+    config: {
+      targetSelectors: ['pre'],
+      streamingContainerSelectors: ['pre'],
+      function_result_selector: ['pre']
+    },
+  },
   // Add more website-specific configurations as needed
   // Example:
   // {
