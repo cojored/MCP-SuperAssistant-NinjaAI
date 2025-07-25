@@ -170,7 +170,7 @@ export const WEBSITE_CONFIGS: Array<{
     },
   },
   {
-    urlPattern: 'ninjatech.ai',
+    urlPattern: 'myninja.ai',
     config: {
       targetSelectors: ['pre'],
       streamingContainerSelectors: ['pre'],

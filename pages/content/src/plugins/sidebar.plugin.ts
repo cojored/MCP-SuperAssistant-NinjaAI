@@ -267,7 +267,7 @@ export class SidebarPlugin implements AdapterPlugin {
     if (hostname.includes('chat.deepseek.com')) return 'deepseek';
     if (hostname.includes('kagi.com')) return 'kagi';
     if (hostname.includes('t3.chat')) return 't3chat';
-    if (hostname.includes('ninjatech.ai')) return 'ninja';
+    if (hostname.includes('myninja.ai')) return 'ninja';
 
     // Default to perplexity for unknown sites
     return 'perplexity';

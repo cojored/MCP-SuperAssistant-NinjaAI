@@ -954,7 +954,7 @@ class PluginRegistry {
         name: 'ninja-adapter',
         version: '1.0.0',
         type: 'website-adapter',
-        hostnames: ['ninjatech.ai'],
+        hostnames: ['myninja.ai'],
         capabilities: ['text-insertion', 'form-submission', 'file-attachment'],
         create: () => new NinjaAdapter(),
         config: {

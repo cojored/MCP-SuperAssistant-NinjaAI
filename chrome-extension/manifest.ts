@@ -45,7 +45,7 @@ const manifest = {
     '*://*.github.com/*',
     '*://*.copilot.github.com/*',
     '*://*.kimi.com/*',
-    '*://*.ninjatech.ai/*',
+    '*://*.myninja.ai/*',
   ],
 
   permissions: ['storage', 'clipboardWrite'],
@@ -65,7 +65,6 @@ const manifest = {
   icons: {
     128: 'icon-128.png',
     34: 'icon-34.png',
-    16: 'icon-16.png',
   },
   content_scripts: [
     // {
@@ -152,7 +151,7 @@ const manifest = {
     },
     // Specific content script for NinjaAI tool call parsing
     {
-      matches: ['*://*.ninjatech.ai/*'],
+      matches: ['*://*.myninja.ai/*'],
       js: ['content/index.iife.js'],
       run_at: 'document_idle',
     },
