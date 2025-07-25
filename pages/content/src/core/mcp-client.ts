@@ -388,7 +388,7 @@ class McpClient {
         'background',
         'mcp:call-tool',
         { toolName, args },
-        { timeout: 30_000 }
+        { timeout: 120_000 }
       );
 
       logMessage(`[McpClient] Tool call successful: ${toolName}`);
