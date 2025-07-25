@@ -24,6 +24,7 @@ import { MistralAdapter } from './adapters/mistral.adapter';
 import { SidebarPlugin } from './sidebar.plugin';
 import { ChatGPTAdapter } from './adapters/chatgpt.adapter';
 import { KimiAdapter } from './adapters/kimi.adapter';
+import { NinjaAdapter } from './adapters/ninja.adapter';
 import { RemoteConfigPlugin } from './remote-config.plugin';
 
 // Types for lazy initialization
@@ -946,6 +947,29 @@ class PluginRegistry {
             urlCheckInterval: 1000,
           },
         },
+      });
+
+      // Register NinjaAdapter factory for NinjaAI
+      this.registerAdapterFactory({
+        name: 'ninja-adapter',
+        version: '1.0.0',
+        type: 'website-adapter',
+        hostnames: ['ninjatech.ai'],
+        capabilities: ['text-insertion', 'form-submission', 'file-attachment'],
+        create: () => new NinjaAdapter(),
+        config: {
+          id: 'ninja-adapter',
+          name: 'Ninja Adapter',
+          description:
+            'Basic adapter for NinjaAI with chat input and form submission support',
+          version: '1.0.0',
+          enabled: true,
+          priority: 5,
+          settings: {
+            logLevel: 'info',
+            urlCheckInterval: 1000
+          }
+        }
       });
       
       console.debug(`[PluginRegistry] Successfully registered SidebarPlugin (initialized) and ${this.adapterFactories.size} adapter factories (lazy)`);

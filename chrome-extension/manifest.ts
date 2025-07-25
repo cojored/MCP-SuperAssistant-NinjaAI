@@ -45,6 +45,7 @@ const manifest = {
     '*://*.github.com/*',
     '*://*.copilot.github.com/*',
     '*://*.kimi.com/*',
+    '*://*.ninjatech.ai/*',
   ],
 
   permissions: ['storage', 'clipboardWrite'],
@@ -146,6 +147,12 @@ const manifest = {
     // Specific content script for Kimi
     {
       matches: ['*://*.kimi.com/*'],
+      js: ['content/index.iife.js'],
+      run_at: 'document_idle',
+    },
+    // Specific content script for NinjaAI tool call parsing
+    {
+      matches: ['*://*.ninjatech.ai/*'],
       js: ['content/index.iife.js'],
       run_at: 'document_idle',
     },
